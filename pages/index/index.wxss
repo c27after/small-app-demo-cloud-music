@@ -84,4 +84,16 @@
 .hotSongName{
   margin-left: 20rpx;
   font-size: 25rpx;
+  /* -webkit-盒子模型 */
+  display: -webkit-box; 
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 溢出省略号代替 */
+  text-overflow: ellipsis;
+  /* 要设置宽度 */
+  width: 500rpx;
+  /* 从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） */
+  -webkit-box-orient: vertical;
+  /* 只显示一行 */
+  -webkit-line-clamp: 1;
 }

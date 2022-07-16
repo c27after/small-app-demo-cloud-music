@@ -49,7 +49,7 @@
   <!-- 标题 -->
     <view class="hotTitle">华语热门歌单</view>
     <!-- 内容 -->
-    <view class="hotMusicItem" wx:for="{{hotHySong}}" wx:key="item.id">
+    <view class="hotMusicItem" wx:for="{{hotHySong}}" wx:key="id">
       <image src="{{item.coverImgUrl}}"></image>
       <text class="index">{{index+1}}</text>
       <text class="hotSongName">{{item.name}}</text>
