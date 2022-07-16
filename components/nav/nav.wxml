@@ -1,0 +1,5 @@
+  <!-- 头部 -->
+  <view class="recommendTop">
+    <text class="recommend">{{title}}</text>
+    <text class="more">更多</text>
+  </view>

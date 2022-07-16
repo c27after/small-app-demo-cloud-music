@@ -1,0 +1,20 @@
+.recommendTop {
+  display: flex;
+  justify-content: space-between;
+  margin: 15rpx;
+  height: 80rpx;
+  align-items: center;
+}
+
+.more {
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #eee;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.recommend {
+  font-weight: bold
+}

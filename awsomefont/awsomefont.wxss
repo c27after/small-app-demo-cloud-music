@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3526643 */
+  src: 
+       url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQ4AAsAAAAACOQAAAPqAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDFAqFEIQ9ATYCJAMQCwoABCAFhGcHTxvEBxEVnD/JfhS4sRtfOVfUhL7qNZ9yDoIHrPN7maTTDL60gNnuul3xJvEkcRIgAG5rqqZZgAsgLxg6+eQ/pB8e+pPlpAUQlaD+zzHTRWIUyLelY2bjwOYDGu2NOi7o7EAO/N6J0y2xK+Kk8nryKwjApgDlMKpUq9OEyD4dh/QjFQo0LsBWiz49u3dEpybUAkmgtSb0okLMwQfGdOMSMFv+vnhDIaHBwCdBH2rQrWoXjj0//OKwDHgByLsED9fnbzYAHyCBPBdmER2WXa2QOpUHiT3Fr8gHmKhm4/mRF4c9DwcXShNc8D88DUgMBAgTpHJ9bBGlfFRiKrLqIz4LBrw4LHnwKsVnayAOuPsgsWma/JiYbrTCjvgIFzHjbds6MDI6tCCw0IkJLw4uauaEeiHlatsOLcAILGztGHaHIdaPMKmjHRPrQyhFe8ii0cuv1rl09fr1Gzdqk2VlZXBxeDVtNly/ikjHr91Y3coNrQludCLCSwMLmlnkWsRC5QC+fInthjYE1zZ1wqsDq/YpWEiMjAxd2HGCwp0Xnajw+e3p8W3nRgeP2JGhQxBDtBHYP+o8KIbtQbQv4W6x0KLgYrWw3Lam1/WlmEv6unWI2/8V+x6/YjW3Lurv1kGrhT6UrvmFvBcm55pQDB4IJEJXHBJfBl+oMVac2rqkv+tL/o9Im/rCpwsU53r2GgO/lqER7bLmbxrZrUq78ZWyzeDzRddLinIr+vPUSWwd2ahg4VpWnVa1ElpFNixYrKZdd2GVn/uoJFye+JjkOWsdYnJUgZfsyeQiO+k/ukEhSVHO2nXOpMNZ5/pHKFqh/Ip0ZS+nX57uStl0evmVdMvTXy4rVsYkkbSCFg6ILRH7KzmqDkYlH162J4EyRo3ZWZHkyII8Bjz0sfEKGQTvhhwss4N3TJ6Slf8jn+PZk8S97aPKfNOOAuD+z9QB2bdbGRoDwKJ/xJxtFJ4HlRaDUsCCWIrhbSga4of3twcbG/B8Xyz3D6GJqypBoImzYOAnNUg0mZAKmwt8OBQCE01ZsMlN1esOcQxAIpQFZGOiB4Jo1oNBJPtBEs1ZpMLeAB+JEP7AFO0fbM06PObIljsJGkUP9heS45mIVuW0dwzraGQs/kZZkh+Frm772RvOKPs4snxCr0pAwhNc44/hODIU4YxO66hajk1DU99SO56qE4EMhTxg/QKJw2bER2v3792hYDUyBIh8O8QSCoPpQafWApA31QwaeiHLFx9BTykKtxHBJuBaO9CIUwyU6XUZclQt7pAojppgFEFV9ek109s7AdjQQypDSKGED2eTftIcrKGBnWUS9oA+KtjomnLqOLGqAAAA') format('woff2'),
+       url('iconfont.woff?t=1657957120131') format('woff'),
+       url('iconfont.ttf?t=1657957120131') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 60rpx;
+  font-style: normal;
+  color:#d43c33;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-paixingbang:before {
+  content: "\e7bd";
+}
+
+.icon-bofanggedan:before {
+  content: "\e6be";
+}
+
+.icon-tuijiange:before {
+  content: "\e6bd";
+}
+

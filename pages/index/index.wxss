@@ -1,0 +1,87 @@
+/* pages/index/index.wxss */
+.swiperContainer {
+  width: 100%;
+}
+.swiperContainerImage {
+  width: 100%;
+  height: 100%;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx;
+  margin: 15rpx;
+  width: 107rpx;
+  height: 107rpx;
+  background-color: pink;
+  border-radius: 50%;
+}
+.scrollViewItem image {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+}
+
+.scrollView {
+  display: flex;
+  height: 270rpx;
+}
+
+.scrollViewItem {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15rpx;
+  width: 200rpx;
+
+}
+
+/* 多行省略号 */
+.scrollViewItem text {
+  display: -webkit-box;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 10rpx;
+
+}
+.hotBox{
+  padding: 15rpx;
+  background-color: #f0f;
+}
+.hotSwiper{
+  height: 650rpx;
+}
+.hotSwiperItem{
+  background-color: #eee;
+}
+.hotMusicItem{
+  display: flex;
+  margin-bottom: 20rpx;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.hotMusicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.index{
+  margin-left: 20rpx;
+  font-weight: 600;
+}
+.hotSongName{
+  margin-left: 20rpx;
+  font-size: 25rpx;
+}
