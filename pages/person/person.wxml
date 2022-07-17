@@ -1,2 +1,54 @@
 <!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class="userBg">
+  <image src="{{islogin?userInfo.profile.backgroundUrl:'../../static/images/bg.jpg'}}"></image>
+</view>
+
+<view style="transform: {{coverTransform}};transition: {{coverTransition}};" class="perParent" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouched">
+  <!-- 登陆区域 -->
+  <view class="perBox">
+    <image src="{{islogin?userInfo.profile.avatarUrl:'../../static/images/111.png'}}"></image>
+    <text wx:if="{{islogin}}" class="perNav">{{userInfo.profile.nickname}}</text>
+    <navigator wx:else url="/pages/login/login" class="perNav">立即登录></navigator>
+  </view>
+  <!-- 操作区域 -->
+  <view>
+    <view class="actionBox">
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+      <view class="actions">
+        <text class="iconfont icon-tuijiange"></text>
+        <text class="iconText">推荐</text>
+      </view>
+    </view>
+  </view>
+  <!-- 我喜欢的音乐 -->
+  <view>
+
+  </view>
+</view>

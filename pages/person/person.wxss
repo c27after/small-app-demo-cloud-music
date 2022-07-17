@@ -1,1 +1,64 @@
 /* pages/person/person.wxss */
+.userBg {
+  width: 100%;
+  height: 0;
+}
+
+.userBg image {
+  width: 100%;
+  height: 500rpx;
+  border-radius: 100% 100% 100% 100% / 0% 0% 20% 20%;
+}
+
+.perParent {
+  padding: 0 15rpx;
+  margin-top: 400rpx;
+  position: relative;
+}
+
+.perBox {
+  border-radius: 15rpx;
+  background-color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75rpx;
+  height: 150rpx;
+}
+
+.perBox image {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -50rpx;
+  border-radius: 50%
+}
+
+.perNav {
+  font-size: 34rpx;
+  margin: 40rpx 0 0;
+  padding: 0;
+  color: #000;
+  font-weight: normal;
+  line-height: 60rpx;
+}
+
+.actionBox {
+  margin-top: 25rpx;
+  background-color: #fefefe;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.actions {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rpx;
+}

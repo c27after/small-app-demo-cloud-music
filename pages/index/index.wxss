@@ -2,6 +2,7 @@
 .swiperContainer {
   width: 100%;
 }
+
 .swiperContainerImage {
   width: 100%;
   height: 100%;
@@ -12,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: #FEFEFE;
   border-bottom: 1px solid #eee;
 }
 
@@ -21,17 +23,20 @@
   align-items: center;
   margin: 15rpx;
 }
-.iconfont{
-  background-color:#FFF3F5;
+
+.iconfont {
+  background-color: #FEFEFE;
   width: 90rpx;
-  height:90rpx;
+  height: 90rpx;
   line-height: 90rpx;
   text-align: center;
   border-radius: 50%;
 }
-.iconText{
+
+.iconText {
   font-size: 27rpx;
 }
+
 .scrollViewItem image {
   height: 200rpx;
   width: 200rpx;
@@ -42,7 +47,10 @@
   display: flex;
   height: 286rpx;
   border-bottom: 1px solid #eee;
-  padding-bottom: 15rpx;
+  /* padding-bottom: 15rpx;
+  padding-top: 15rpx; */
+  padding: 15rpx;
+  background-color: #FEFEFE;
 }
 
 .scrollViewItem {
@@ -64,35 +72,44 @@
   margin-top: 10rpx;
 
 }
-.hotBox{
-  padding:0 15rpx;
+
+.hotBox {
+  padding: 0 15rpx;
 }
-.hotSwiper{
+
+.hotSwiper {
   height: 650rpx;
+  padding: 15rpx;
 }
-.hotSwiperItem{
-  background-color: #fff;
+
+.hotSwiperItem {
+  background-color: #FEFEFE;
+  border-radius: 15rpx;
 }
-.hotMusicItem{
+
+.hotMusicItem {
   display: flex;
   margin-bottom: 20rpx;
   align-items: center;
   margin-top: 10rpx;
 }
-.hotMusicItem image{
+
+.hotMusicItem image {
   width: 100rpx;
   height: 100rpx;
   border-radius: 10rpx;
 }
-.index{
+
+.index {
   margin-left: 20rpx;
   font-weight: 600;
 }
-.hotSongName{
+
+.hotSongName {
   margin-left: 20rpx;
   font-size: 25rpx;
   /* -webkit-盒子模型 */
-  display: -webkit-box; 
+  display: -webkit-box;
   /* 溢出隐藏 */
   overflow: hidden;
   /* 溢出省略号代替 */

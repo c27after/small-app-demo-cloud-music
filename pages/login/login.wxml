@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<image class="loginbg" src="../../static/images/loginbg.jpg"></image>
+<view class="loginBox">
+  <view class="inputBox">
+    <text>账号</text>
+    <input class="inputItem" id="phone" type="text" placeholder="请输入手机号码" bindinput="handleInput"/>
+    <text>密码</text>
+    <input class="inputItem" id="pwd" type="password" placeholder="请输入密码" bindinput="handleInput"/>
+    <button class="loginBtn" hover-class="btnAct" bindtap="login">登陆</button>
+  </view>
+</view>
+<text class="text">登陆遇到问题</text>
