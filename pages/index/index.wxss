@@ -19,12 +19,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rpx;
   margin: 15rpx;
-  width: 107rpx;
-  height: 107rpx;
-  background-color: pink;
+}
+.iconfont{
+  background-color:#FFF3F5;
+  width: 90rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  text-align: center;
   border-radius: 50%;
+}
+.iconText{
+  font-size: 27rpx;
 }
 .scrollViewItem image {
   height: 200rpx;
@@ -34,7 +40,9 @@
 
 .scrollView {
   display: flex;
-  height: 270rpx;
+  height: 286rpx;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15rpx;
 }
 
 .scrollViewItem {
@@ -57,14 +65,13 @@
 
 }
 .hotBox{
-  padding: 15rpx;
-  background-color: #f0f;
+  padding:0 15rpx;
 }
 .hotSwiper{
   height: 650rpx;
 }
 .hotSwiperItem{
-  background-color: #eee;
+  background-color: #fff;
 }
 .hotMusicItem{
   display: flex;

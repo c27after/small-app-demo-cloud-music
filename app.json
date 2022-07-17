@@ -1,12 +1,34 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/mv/mv",
+    "pages/person/person"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "小程序"
+    "navigationBarTitleText": "抑音乐"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "position": "top",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath":  "pages/mv/mv",
+      "text": "mv"
+
+    },
+    {
+      "pagePath":  "pages/person/person",
+      "text": "个人中心"
+    }
+  ]
+  }
 }
