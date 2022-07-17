@@ -1,0 +1,16 @@
+<view class="videoBox">
+  <view class="videoTop">
+    <image src="{{coverUrl}}" alt="" />
+    <text class="time">06:45</text>
+    <text class="playcount">183万</text>
+  </view>
+  <view class="videoBottom">
+    <view class="videoName">
+      <text>{{name}}</text>
+    </view>
+    <view class="creatorBox">
+      <text class="creator">{{artistName}}</text>
+      <text class="moreAction">...</text>
+    </view>
+  </view>
+</view>

@@ -54,7 +54,7 @@ Page({
       return
     }
     let { data } = await request("/login/cellphone", { phone, password: pwd })
-    console.log(data)
+    console.log("咩",data)
     if (data.code === 200) {
       wx.showToast({
         title: '登陆成功',
@@ -69,6 +69,7 @@ Page({
       }
      })
       wx.setStorageSync('userInfo', JSON.stringify(data))
+      wx.setStorageSync('token', data.token)
     } else if (data.code === 400) {
       wx.showToast({
         title: '手机号不存在',

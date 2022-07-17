@@ -62,3 +62,47 @@
   align-items: center;
   padding: 15rpx;
 }
+.loveMusic{
+  margin-top:25rpx;
+  background-color: #fff;
+  padding: 15rpx;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loveMusic image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.left{
+  display: flex;
+  align-items: center;
+}
+.loveMusicInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.loveTitle{
+  margin-bottom: 15rpx;
+}
+.loveCount{
+  color: #a4a4a4;
+  font-size: 25rpx;
+}
+.heartBeat{
+  border: 1px solid #a4a4a4;
+  padding: 10rpx;
+  border-radius: 18rpx
+  ;font-size: 25rpx;
+}
+.tips{
+  margin-top: 15rpx;
+  background-color: #fff;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 18rpx
+  ;font-weight: bold;
+}

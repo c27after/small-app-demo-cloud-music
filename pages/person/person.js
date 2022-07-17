@@ -2,6 +2,7 @@
 let starY = 0;
 let moveY = 0;
 let moveDistance = 0;
+import request from '../../utils/request'
 Page({
 
   /**
@@ -10,8 +11,10 @@ Page({
   data: {
     coverTransform: `translateY(${moveDistance})`,
     coverTransition: "transform 1s linear",
-    islogin:false,
-    userInfo: {}
+    islogin: false,
+    userInfo: {},
+    myLoveSongMenu: {},
+    RencentlyPlaySongs: []
   },
 
   /**
@@ -26,17 +29,59 @@ Page({
         title: '请先登录',
         icon: "error"
       })
-    }else{
+    } else {
       let userInfo = JSON.parse(storeInfo)
       console.log(userInfo)
       this.setData({
         userInfo,
-        islogin:true
+        islogin: true
       })
     }
+    //获取用户的id
+    let uid = JSON.parse(wx.getStorageSync('userInfo')).account.id
+    this.getUserLoveSongMenu(uid)
+    //获取用户最近听歌信息
+    // this.getUserRencentlyPlaySongs(uid)
+    this.getUserStatus()
   },
+  //获取用户喜欢的歌单的函数
+  async getUserLoveSongMenu(uid) {
+    let { data } = await request("/user/playlist", {
+      uid
+    })
+    this.setData({
+      myLoveSongMenu: data
+    })
+  },
+  //获取最近播放记录
+  async getUserRencentlyPlaySongs(uid) {
+    let { data } = await request("/user/record", {
+      uid,
+      type: 1
+    })
+    console.log(data);
+  },
+  //获取用户登陆状态
+  async getUserStatus() {
+    let res =await request("/login/status")
+    console.log("登陆状态", res);
+  },
+  //退出登陆
+  logout() {
+    request("/logout")
+    this.setData({
+      islogin:false,
+      userInfo:{}
+    })
+    wx.removeStorageSync('userInfo')
+    wx.removeStorageSync('token')
+    wx.showToast({
+      title: '退出成功',
+    })
+
+  }
   // -----------------------滑块----------------------------
-  handleTouchStart(e) {
+  , handleTouchStart(e) {
     starY = e.touches[0].clientY;
   },
   handleTouchMove(e) {
@@ -61,6 +106,7 @@ Page({
       coverTransition: "transform 1s linear"
     })
   },
+  // -----------------------滑块----------------------------
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

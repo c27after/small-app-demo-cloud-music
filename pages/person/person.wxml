@@ -48,7 +48,24 @@
     </view>
   </view>
   <!-- 我喜欢的音乐 -->
-  <view>
-
+  <view class="loveMusic" wx:if="{{islogin}}">
+    <view class="left">
+      <image src="{{myLoveSongMenu.playlist[0].coverImgUrl}}"></image>
+      <view class="loveMusicInfo">
+        <text class="loveTitle">{{myLoveSongMenu.playlist[0].name}}</text>
+        <text class="loveCount">{{myLoveSongMenu.playlist[0].trackCount}}首</text>
+      </view>
+    </view>
+    <view class="heartBeat">
+      <text>心动模式</text>
+    </view>
   </view>
+  <!-- 信息展示占位 -->
+  <view class="tips" wx:else>
+    <text>登录后展示更多信息</text>
+  </view>
+  <!-- 最近播放 -->
+  <view class=""></view>
+  <!-- 退出登陆 -->
+  <button wx:if="{{islogin}}" catchtap="logout">退出登陆</button>
 </view>

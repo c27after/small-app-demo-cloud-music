@@ -1,2 +1,15 @@
 <!--pages/mv/mv.wxml-->
-<text>pages/mv/mv.wxml</text>
+<view class="videoContanier">
+  <Nav title="巅峰榜"></Nav>
+  <scroll-view class="mvSwiper" enable-flex scroll-x>
+    <mvSwiper wx:for="{{topMvlist}}" wx:key="id" name="{{item.name}}" coverUrl="{{item.cover}}" artistName="{{item.artistName}}"></mvSwiper>
+  </scroll-view>
+  <Nav title="最新MV"></Nav>
+  <scroll-view class="mvSwiper" enable-flex scroll-x>
+    <mvSwiper wx:for="{{newMvlist}}" wx:key="id" name="{{item.name}}" coverUrl="{{item.cover}}" artistName="{{item.artistName}}"></mvSwiper>
+  </scroll-view>
+  <Nav title="网易出品MV"></Nav>
+  <scroll-view class="mvSwiper" enable-flex scroll-x>
+    <mvSwiper wx:for="{{wycpMvlist}}" wx:key="id" name="{{item.name}}" coverUrl="{{item.cover}}" artistName="{{item.artistName}}"></mvSwiper>
+  </scroll-view>
+</view>
