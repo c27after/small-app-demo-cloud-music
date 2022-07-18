@@ -1,0 +1,38 @@
+@import "../../awsomefont/awsomefont.wxss";
+.recMusItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.itemLeft{
+  display: flex;
+}
+.itemLeft image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.songsInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 15rpx;
+}
+.songsArt{
+  color: #a4a4a4;
+  font-size: 26rpx;
+}
+.songsName{
+  display: -webkit-box;
+  font-size:29rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.iconfont{
+  color: #a4a4a4;
+  font-size: 40rpx;
+  margin: 0 5rpx;
+}

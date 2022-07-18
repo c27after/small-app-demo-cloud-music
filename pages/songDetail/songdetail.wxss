@@ -1,0 +1,83 @@
+.songPlayContainer {
+  padding: 0 15rpx;
+  background-color: gray;
+  height: 100vh;
+}
+
+.songPlayTop {
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.zhizhen {
+  width: 200rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 150rpx;
+  z-index: 5;
+  left: 330rpx;
+  transform-origin:30rpx 30rpx;
+  transform:rotate(-20deg);
+  transition:2s; 
+}
+.zhizhenRotate{
+  transform:rotate(0deg);
+}
+
+.songPic {
+  border-radius: 50%;
+  width: 330rpx;
+  height: 330rpx;
+  position: absolute;
+  top:400rpx;
+}
+.yuanpan{
+  width: 500rpx;
+  height: 500rpx;
+  position: absolute;
+  top: 320rpx;
+}
+
+.yuanpanAnimation{
+  animation: disc 10s linear infinite;
+  animation-delay: 1.5s;
+  animation-play-state:running
+}
+/* @keyframes : 设置动画帧
+ 1）from to 
+  -简单动画
+ 2）百分比 
+  -复杂动画 */
+@keyframes disc {
+   from{
+    transform: rotate(0deg);
+    animation-play-state:paused
+   }
+   to{
+     transform: rotate(360deg);
+     animation-play-state:paused
+   }
+   
+}
+
+.actionArea{
+  width: 100%;
+  border-top: 2px solid #fff;
+  position: fixed;
+  bottom:0rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 25rpx 0;
+}
+.iconfont{
+  color: #fff;
+}

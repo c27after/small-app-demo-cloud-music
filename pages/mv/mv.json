@@ -2,5 +2,6 @@
   "usingComponents": {
     "Nav":"/components/nav/nav",
     "mvSwiper":"/components/swiperMv/swiperMv"
-  }
+  },
+  "navigationBarTitleText": "MV现场"
 }

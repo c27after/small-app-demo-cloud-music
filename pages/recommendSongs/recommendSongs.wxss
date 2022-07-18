@@ -1,0 +1,54 @@
+.recommendSongsContainer{
+  padding: 0 16rpx;
+}
+.recDate{
+  position: relative;
+}
+.recDate image{
+  width: 100%;
+  height: 230rpx;
+  border-radius: 100% 100% 100% 100% / 0% 0% 20% 20%;
+}
+.recTime{
+  /* display: block;
+  background-color: #e9524b;
+  width: 180rpx;
+  height: 160rpx; */
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  padding: 20rpx;
+  color: #fff;
+  font-size: 45rpx;
+  border-radius: 15rpx;
+  text-align: center;
+}
+.recSongsBox{
+  padding-bottom: 10rpx;
+  background-color: #fff;
+  margin-top: 0;
+}
+/* .recTop{
+  display: flex;
+  height: 50rpx;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx
+} */
+.songsScroll{
+  height: calc(100vh - 245rpx);
+}
+.recTopIcon{
+  font-size: 34rpx;
+  color: #000;
+  
+}
+.download{
+  font-size: 30rpx;
+  color: #000;
+}
+.recTopIcon,.download{
+  font-weight:600;
+}

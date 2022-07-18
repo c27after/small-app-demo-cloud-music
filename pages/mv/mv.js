@@ -8,7 +8,8 @@ Page({
     // topMvlist:[],
     mvTagsList: [],
     tagsId: "",
-    mvList: []
+    mvList: [],
+    isRefresh: false
   },
 
   /**
@@ -61,11 +62,22 @@ Page({
       return
     } else {
       this.setData({
-        mvList: data.datas
+        mvList: data.datas,
+        isRefresh: false
       })
 
     }
     wx.hideLoading()
+  },
+  refreshHandle() {
+    console.log("下拉刷新");
+    this.getTagsVideo(this.data.tagsId)
+  }
+  ,lowerHandle(){
+    wx.showToast({
+      title: '没有更多了',
+      icon:"none"
+    })
   }
   /**
    * 生命周期函数--监听页面初次渲染完成

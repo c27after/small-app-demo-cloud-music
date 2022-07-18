@@ -1,8 +1,6 @@
 <!-- 轮播图区域 -->
 <view class="swiperContainer">
-  <swiper autoplay indicator-dots indicator-color="ivory" indicator-active-color="#d43c33"
-  class="bannerSwiper"
-  >
+  <swiper autoplay indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" class="bannerSwiper">
     <swiper-item wx:for="{{bannerList}}" wx:key="bannerId" class="swiperContainerItem">
       <image class="swiperContainerImage" src="{{item.pic}}"></image>
     </swiper-item>
@@ -10,7 +8,7 @@
 </view>
 <!-- 图标导航区 -->
 <view class="iconBox">
-  <view class="iconItem">
+  <view class="iconItem" catchtap="goToRec">
     <text class="iconfont icon-tuijiange"></text>
     <text class="iconText">推荐</text>
   </view>
@@ -44,56 +42,56 @@
 <Nav title="推荐歌曲"></Nav>
 <view class="hotBox">
   <swiper class="hotSwiper" next-margin="50rpx">
-  <!-- 第一个swpier -->
-  <swiper-item class="hotSwiperItem" >
-  <!-- 标题 -->
-    <view class="hotTitle">华语热门歌单</view>
-    <!-- 内容 -->
-    <view class="hotMusicItem" wx:for="{{hotHySong}}" wx:key="id">
-      <image src="{{item.coverImgUrl}}"></image>
-      <text class="index">{{index+1}}</text>
-      <text class="hotSongName">{{item.name}}</text>
-    </view>
-  </swiper-item>
-  <swiper-item class="hotSwiperItem">
-    <view class="hotTitle">云音乐热歌榜</view>
-    <view class="hotMusicItem">
-      <image src="../../static/images/111.png"></image>
-      <text>1</text>
-      <text>真的爱你</text>
- 
-    </view>
-    <view class="hotMusicItem">
-      <image src="../../static/images/111.png"></image>
-      <text>2</text>
-      <text>真的爱你</text>
+    <!-- 第一个swpier -->
+    <swiper-item class="hotSwiperItem">
+      <!-- 标题 -->
+      <view class="hotTitle">华语热门歌单</view>
+      <!-- 内容 -->
+      <view class="hotMusicItem" wx:for="{{hotHySong}}" wx:key="id">
+        <image src="{{item.coverImgUrl}}"></image>
+        <text class="index">{{index+1}}</text>
+        <text class="hotSongName">{{item.name}}</text>
+      </view>
+    </swiper-item>
+    <swiper-item class="hotSwiperItem">
+      <view class="hotTitle">云音乐热歌榜</view>
+      <view class="hotMusicItem">
+        <image src="../../static/images/111.png"></image>
+        <text>1</text>
+        <text>真的爱你</text>
 
-    </view>
-    <view class="hotMusicItem">
-      <image src="../../static/images/111.png"></image>
-      <text>3</text>
-      <text>真的爱你</text>
-    </view>
-  </swiper-item>
-  <swiper-item class="hotSwiperItem">
-    <view class="hotTitle">云音乐热歌榜</view>
-    <view class="hotMusicItem">
-      <image src="../../static/images/111.png"></image>
-      <text>1</text>
-      <text>真的爱你</text>
- 
-    </view>
-    <view class="hotMusicItem">
-      <image src="../../static/images/111.png"></image>
-      <text>2</text>
-      <text>真的爱你</text>
+      </view>
+      <view class="hotMusicItem">
+        <image src="../../static/images/111.png"></image>
+        <text>2</text>
+        <text>真的爱你</text>
 
-    </view>
-    <view class="hotMusicItem">
-      <image src="../../static/images/111.png"></image>
-      <text>3</text>
-      <text>真的爱你</text>
-    </view>
-  </swiper-item>
+      </view>
+      <view class="hotMusicItem">
+        <image src="../../static/images/111.png"></image>
+        <text>3</text>
+        <text>真的爱你</text>
+      </view>
+    </swiper-item>
+    <swiper-item class="hotSwiperItem">
+      <view class="hotTitle">云音乐热歌榜</view>
+      <view class="hotMusicItem">
+        <image src="../../static/images/111.png"></image>
+        <text>1</text>
+        <text>真的爱你</text>
+
+      </view>
+      <view class="hotMusicItem">
+        <image src="../../static/images/111.png"></image>
+        <text>2</text>
+        <text>真的爱你</text>
+
+      </view>
+      <view class="hotMusicItem">
+        <image src="../../static/images/111.png"></image>
+        <text>3</text>
+        <text>真的爱你</text>
+      </view>
+    </swiper-item>
   </swiper>
 </view>

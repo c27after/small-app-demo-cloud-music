@@ -1,0 +1,16 @@
+<view class="recDate">
+    <image src="../../static/images/rec.jpg"></image>
+    <text class="recTime">{{month}}/{{day}}</text>
+  </view>
+<view class="recommendSongsContainer">
+  <!-- <view class="recTop">
+    <text class="iconfont .icon-bofang recTopIcon">播放全部</text>
+    <text class="iconfont .icon-xiazai download">下载</text>
+  </view> -->
+  <view class="recSongsBox">
+    <scroll-view class="songsScroll" scroll-y>
+      <Songs wx:for="{{dailySongs}}" wx:key="id" songsArt="{{item.ar[0].name}}" songsName="{{item.name}}" songsUrl="{{item.al.picUrl}}"></Songs>
+    </scroll-view>
+  </view>
+
+</view>
