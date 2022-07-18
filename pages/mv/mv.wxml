@@ -1,15 +1,16 @@
-<!--pages/mv/mv.wxml-->
 <view class="videoContanier">
-  <Nav title="巅峰榜"></Nav>
-  <scroll-view class="mvSwiper" enable-flex scroll-x>
-    <mvSwiper wx:for="{{topMvlist}}" wx:key="id" name="{{item.name}}" coverUrl="{{item.cover}}" artistName="{{item.artistName}}"></mvSwiper>
+  <scroll-view class="tagsSwiper" scroll-x enable-flex>
+    <view class="tagItem" wx:for="{{mvTagsList}}" wx:key="id" catchtap="handleTap" id="{{item.id}}">
+      <text class="{{item.id===tagsId?'active':''}}">{{item.name}}</text>
+    </view>
   </scroll-view>
-  <Nav title="最新MV"></Nav>
-  <scroll-view class="mvSwiper" enable-flex scroll-x>
-    <mvSwiper wx:for="{{newMvlist}}" wx:key="id" name="{{item.name}}" coverUrl="{{item.cover}}" artistName="{{item.artistName}}"></mvSwiper>
-  </scroll-view>
-  <Nav title="网易出品MV"></Nav>
-  <scroll-view class="mvSwiper" enable-flex scroll-x>
-    <mvSwiper wx:for="{{wycpMvlist}}" wx:key="id" name="{{item.name}}" coverUrl="{{item.cover}}" artistName="{{item.artistName}}"></mvSwiper>
+  <scroll-view scroll-y class="mvScroll">
+    <mvSwiper
+  wx:for="{{mvList}}" 
+  wx:key="{{item.data.vid}}"
+  name="{{item.data.title}}" 
+  coverUrl="{{item.data.coverUrl}}" 
+  artistName="{{item.data.creator.nickname}}">
+  </mvSwiper>
   </scroll-view>
 </view>

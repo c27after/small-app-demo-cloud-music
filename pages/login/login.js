@@ -69,7 +69,7 @@ Page({
       }
      })
       wx.setStorageSync('userInfo', JSON.stringify(data))
-      wx.setStorageSync('token', data.token)
+      wx.setStorageSync('cookie', data.cookie)
     } else if (data.code === 400) {
       wx.showToast({
         title: '手机号不存在',

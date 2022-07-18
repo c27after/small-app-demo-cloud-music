@@ -5,46 +5,73 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topMvlist:[],
-    newMvlist:[],
-    wycpMvlist:[]
+    // topMvlist:[],
+    mvTagsList: [],
+    tagsId: "",
+    mvList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.getMvTop()
-    this.getMvNew()
-    this.getRcmdMv()
+    // this.getMvTop()
+    // this.getMvNew()
+    // this.getRcmdMv()
+    this.getMvTags()
   },
   //获取mv排行榜
-  async getMvTop(){
-    let {data} =await request("/top/mv",{limit:10})
+  // async getMvTop(){
+  //   let {data} =await request("/top/mv",{limit:10})
+  //   this.setData({
+  //     topMvlist:data.data
+  //   })
+  // },
+  handleTap(e) {
+    let tagsId = e.currentTarget.id * 1
     this.setData({
-      topMvlist:data.data
+      tagsId
     })
-    console.log(data.data);
+    this.getTagsVideo(tagsId)
   },
-  //最新MV速递
-  async getMvNew(){
-    let {data}=await request("/mv/first",{limit:10})
+  async getMvTags() {
+    let { data } = await request("/video/group/list")
     this.setData({
-      newMvlist:data.data
+      mvTagsList: data.data.slice(0, 14),
+      tagsId: data.data[0].id
     })
+    this.getTagsVideo(data.data[0].id)
+
   },
-  //获取网易mv
-  async getRcmdMv(){
-    let {data}=await request("/mv/exclusive/rcmd",{limit:10})
-    this.setData({
-      wycpMvlist:data.data
+  async getTagsVideo(id) {
+    if (this.mvList !== null) {
+      this.setData({
+        mvList: []
+      })
+    }
+    wx.showLoading({
+      title: '加载中',
     })
+    let { data } = await request("/video/group", { id })
+    if (data.datas.length <= 0) {
+      wx.showToast({
+        title: "暂无视频推荐",
+        icon: 'error'
+      })
+      return
+    } else {
+      this.setData({
+        mvList: data.datas
+      })
+
+    }
+    wx.hideLoading()
   }
-  //获取网易出品MV
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  ,onReady() {
+
+  , onReady() {
 
   },
 

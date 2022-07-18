@@ -23,15 +23,15 @@ Page({
   onLoad(options) {
     //读取用户信息
     let storeInfo = wx.getStorageSync('userInfo')
-    console.log(storeInfo === '')
+    // console.log(storeInfo === '')
     if (storeInfo === '') {
       wx.showToast({
         title: '请先登录',
         icon: "error"
       })
+      return
     } else {
       let userInfo = JSON.parse(storeInfo)
-      console.log(userInfo)
       this.setData({
         userInfo,
         islogin: true
@@ -41,8 +41,8 @@ Page({
     let uid = JSON.parse(wx.getStorageSync('userInfo')).account.id
     this.getUserLoveSongMenu(uid)
     //获取用户最近听歌信息
-    // this.getUserRencentlyPlaySongs(uid)
-    this.getUserStatus()
+    this.getUserRencentlyPlaySongs(uid)
+    // this.getUserStatus()
   },
   //获取用户喜欢的歌单的函数
   async getUserLoveSongMenu(uid) {
@@ -58,7 +58,7 @@ Page({
     let { data } = await request("/user/record", {
       uid,
       type: 1
-    })
+    },"GET",{cookie:"MUSIC_U=3f45bbf84182d23536a26c0832c279938182fe18fe02ee0f7ff297a2f77aeb80519e07624a9f00535fa3ec0f4faec3c719f3cdb7eb0a43001284833e6e1017d66afa8b2ffe57a4d6a89fe7c55eac81f3; Max-Age=1296000; Expires=Tue, 02 Aug 2022 02:03:42 GMT; Path=/;;MUSIC_A_T=1458031811944; Max-Age=2147483647; Expires=Sat, 05 Aug 2090 05:17:49 GMT; Path=/eapi/clientlog;"})
     console.log(data);
   },
   //获取用户登陆状态
@@ -74,7 +74,7 @@ Page({
       userInfo:{}
     })
     wx.removeStorageSync('userInfo')
-    wx.removeStorageSync('token')
+    wx.removeStorageSync('cookie')
     wx.showToast({
       title: '退出成功',
     })

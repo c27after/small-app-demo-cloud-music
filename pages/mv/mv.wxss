@@ -3,78 +3,26 @@
   padding-bottom: 20rpx;
 }
 
-.videoBox {
-  background-color: #fff;
-  border-radius: 18rpx;
-  height: 370rpx;
-  margin-right: 20rpx;
-}
-
-.videoTitle {
-  font-weight: bold;
-  font-size: 35rpx;
-}
-
-.videoTop {
-  position: relative;
-}
-
-.time {
-  position: absolute;
-  right: 8rpx;
-  bottom: 8rpx;
-  color: #fff;
-  font-size: 25rpx;
-}
-
-
-
-.videoBox image {
-  width: 400rpx;
-  height: 230rpx;
-  border-top-left-radius: 18rpx;
-  border-top-right-radius: 18rpx;
-}
-
-.videoBottom {
-  padding: 15rpx;
+.tagsSwiper {
   display: flex;
-  height: 110rpx;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 55rpx;
+  line-height: 55rpx;
+  white-space: nowrap;
+  margin: 10rpx 0;
 }
 
-.creatorBox {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15rpx;
+.tagItem {
+  margin-right: 25rpx;
+  background-color:#FFF2F4;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  color: gray;
 }
 
-.creator,
-.moreAction {
-  color: #a4a4a4;
-  font-size: 28rpx;
+.tagItem .active {
+  border-bottom: 4rpx solid #d43c33;
+  /* border-bottom: 4rpx solid #d43c33; */
 }
-
-.videoName text {
-  font-size: 28rpx;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.mvSwiper {
-  display: flex;
-  height: 370rpx;
-
-}
-
-.playcount {
-  position: absolute;
-  left: 8rpx;
-  bottom: 8rpx;
-  color: #fff;
-  font-size: 25rpx;
+.mvScroll{
+  height: calc(100vh - 100rpx);
 }
