@@ -1,14 +1,19 @@
 <view class="songPlayContainer">
   <view class="songPlayTop">
-    <text class="songName">孤勇者</text>
+    <text class="songName">{{playList.ar[0].name}}</text>
   </view>
   <view class="imageBox">
     <image class="zhizhen {{isPlay && 'zhizhenRotate'}}" src="../../static/zhizhen.png"></image>
-    <image class="songPic {{isPlay && 'yuanpanAnimation'}}" src="../../static/images/222.png"></image>
+    <image class="songPic {{isPlay && 'yuanpanAnimation'}}" src="{{playList.al.picUrl}}"></image>
     <image class="yuanpan" src="../../static/yuanpan.png"></image>
   </view>
   <view class="actionArea">
-    <text catchtap="togglePlay" wx:if="{{isPlay}}" class="iconfont icon-bofang"></text>
-    <text  catchtap="togglePlay" wx:else class="iconfont icon-xinhao"></text>
+    <text  catchtap="togglePlay" class="iconfont icon-suiji smallIcon"></text>
+    <text  catchtap="togglePlay" class="iconfont icon-shangyishou smallIcon"></text>
+    <text  catchtap="togglePlay" wx:if="{{isPlay}}" class="iconfont icon-zanting"></text>
+    <text  catchtap="togglePlay" wx:else class="iconfont icon-bofang "></text>
+    <text  catchtap="togglePlay" class="iconfont icon-kuaijin smallIcon"></text>
+    <text  catchtap="togglePlay" class="iconfont icon-bofanggedan smallIcon"></text>
+    
   </view>
 </view>

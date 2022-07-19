@@ -25,6 +25,7 @@
 }
 .songsName{
   display: -webkit-box;
+  width: 400rpx;
   font-size:29rpx;
   overflow: hidden;
   text-overflow: ellipsis;

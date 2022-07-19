@@ -9,7 +9,15 @@
   </view> -->
   <view class="recSongsBox">
     <scroll-view class="songsScroll" scroll-y>
-      <Songs wx:for="{{dailySongs}}" wx:key="id" songsArt="{{item.ar[0].name}}" songsName="{{item.name}}" songsUrl="{{item.al.picUrl}}"></Songs>
+      <Songs
+      wx:for="{{dailySongs}}" 
+      wx:key="id" 
+      data-id="{{item.id}}"
+      songsArt="{{item.ar[0].name}}" 
+      songsName="{{item.name}}" 
+      songsUrl="{{item.al.picUrl}}"
+      catchtap="toDetail"
+      ></Songs>
     </scroll-view>
   </view>
 

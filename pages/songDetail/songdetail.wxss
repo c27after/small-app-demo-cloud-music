@@ -69,6 +69,9 @@
 }
 
 .actionArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   border-top: 2px solid #fff;
   position: fixed;
@@ -80,4 +83,8 @@
 }
 .iconfont{
   color: #fff;
+}
+.smallIcon{
+  font-size: 50rpx;
+  margin: 0 20rpx;
 }

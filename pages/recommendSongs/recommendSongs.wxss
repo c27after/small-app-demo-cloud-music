@@ -38,7 +38,7 @@
   border-top-right-radius: 10rpx
 } */
 .songsScroll{
-  height: calc(100vh - 245rpx);
+  height: calc(100vh - 248rpx);
 }
 .recTopIcon{
   font-size: 34rpx;

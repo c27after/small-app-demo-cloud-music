@@ -34,6 +34,12 @@ Page({
     }
     this.getRecSongs()
   },
+  toDetail(e){
+    let ids = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/songDetail/songdetail?ids='+ids,
+    })
+  },
   async getRecSongs() {
     wx.showLoading({
       title: '加载中',
