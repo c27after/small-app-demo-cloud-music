@@ -1,3 +1,4 @@
+import Pubsub from 'pubsub-js'
 import request from '../../utils/request'
 let cookie = "MUSIC_U=3f45bbf84182d23536a26c0832c279938182fe18fe02ee0f7ff297a2f77aeb80519e07624a9f00535fa3ec0f4faec3c719f3cdb7eb0a43001284833e6e1017d66afa8b2ffe57a4d6a89fe7c55eac81f3; Max-Age=1296000; Expires=Tue, 02 Aug 2022 02:03:42 GMT; Path=/;;MUSIC_A_T=1458031811944; Max-Age=2147483647; Expires=Sat, 05 Aug 2090 05:17:49 GMT; Path=/eapi/clientlog;"
 Page({
@@ -22,12 +23,23 @@ Page({
     setTimeout(() => {
       this.togglePlay()
     }, 500)
+    Pubsub.subscribe("musicId", (msg, item) => {
+      console.log(item);
+      this.setData({
+        isPlay: !this.data.isPlay,
+        playList: item,
+        musicId: item.id,
+        musicName: item.name
+      })
+      this.togglePlay()
+
+    })
   },
   //获取歌曲详情
   async getSongsDetail(ids) {
     let { data } = await request("/song/detail", { ids }, "GET", { cookie })
     wx.setNavigationBarTitle({
-      title: data.songs[0].name,
+      title: "抑音乐",
     })
     if (data.songs.length <= 0) {
       wx.showToast({
@@ -67,21 +79,19 @@ Page({
   async musicControl(isPlay, musicId, musicName) {
     if (isPlay) {
       let { data } = await request("/song/url", { id: musicId }, "GET", { cookie })
-      console.log(data);
       this.BackgroundAudioManager.src = data.data[0].url
       this.BackgroundAudioManager.title = musicName
     } else {
       this.BackgroundAudioManager.pause()
     }
   },
-  delayPlay() {
-    setTimeout(() => {
-      this.BackgroundAudioManager.play()
-    }, 1500)
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  controlPlay(e) {
+    let type = e.currentTarget.id
+    Pubsub.publish("switchType", type)
+  },
   onReady() {
 
   },

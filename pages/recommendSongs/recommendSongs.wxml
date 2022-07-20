@@ -17,6 +17,7 @@
       songsName="{{item.name}}" 
       songsUrl="{{item.al.picUrl}}"
       catchtap="toDetail"
+      data-index="{{index}}"
       ></Songs>
     </scroll-view>
   </view>

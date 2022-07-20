@@ -1,4 +1,4 @@
-// pages/recommendSongs/recommendSongs.js
+import Pubsub from 'pubsub-js'
 import request from '../../utils/request'
 Page({
 
@@ -8,7 +8,8 @@ Page({
   data: {
     dailySongs: [],
     day: "",
-    month: ""
+    month: "",
+    index: ""
   },
 
   /**
@@ -24,7 +25,7 @@ Page({
       wx.showToast({
         title: '请先登录',
         icon: "none",
-        success:()=>{
+        success: () => {
           wx.reLaunch({
             url: '/pages/login/login',
           })
@@ -33,11 +34,32 @@ Page({
       return
     }
     this.getRecSongs()
+    Pubsub.subscribe("switchType", (msg, type) => {
+      let { dailySongs, index } = this.data
+      if (type === 'pre') {
+        index -= 1
+        this.setData({
+          index,
+          // dailySongs: this.dailySongs[this.index -= 1]
+        })
+        Pubsub.publish("musicId", dailySongs[index])
+      } else if (type === 'next') {
+        index += 1
+        this.setData({
+          index,
+          // dailySongs: this.dailySongs[this.index += 1]
+        })
+        Pubsub.publish("musicId", dailySongs[index])
+      }
+    })
   },
-  toDetail(e){
+  toDetail(e) {
     let ids = e.currentTarget.dataset.id
+    this.setData({
+      index: e.currentTarget.dataset.index
+    })
     wx.navigateTo({
-      url: '/pages/songDetail/songdetail?ids='+ids,
+      url: '/pages/songDetail/songdetail?ids=' + ids,
     })
   },
   async getRecSongs() {
