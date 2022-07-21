@@ -18,6 +18,7 @@
       songsUrl="{{item.al.picUrl}}"
       catchtap="toDetail"
       data-index="{{index}}"
+      mvId="{{item.mv}}"
       ></Songs>
     </scroll-view>
   </view>

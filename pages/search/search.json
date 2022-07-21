@@ -1,5 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "Songs":"../../components/songs/songs"
+  }
   ,
   "navigationBarTitleText": "发现"
+
 }

@@ -25,7 +25,8 @@
 }
 
 .iconfont {
-  background-color: #FFF2F4;
+  background-color: #d43c33;
+  color:#FFF;
   width: 90rpx;
   height: 90rpx;
   line-height: 90rpx;

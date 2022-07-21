@@ -1,2 +1,56 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="searchContainer">
+  <view class="header">
+    <view class="searchArea">
+      <text class="iconfont icon-sousuo searchIcon"></text>
+      <input value="{{searchContent}}" class="fullText" type="text" placeholder="{{searchDefault}}" bindinput="searchInputChange" />
+      <!-- <text wx:if="{{searchContent}}" class="iconfont icon-chacha chacha"></text> -->
+    </view>
+    <text catchtap="clearContent" class="cancel">取消</text>
+  </view>
+  <view class="historyArea" wx:if="{{hisSearchList&&hisSearchList.length>0&&resSongs.length<=0&&!searchContent}}">
+    <view class="historyAreaTop">
+      <text class="hisName">历史搜索</text>
+      <text catchtap="delHis" class="iconfont icon-lajixiang lajiIcon"></text>
+    </view>
+    <view class="hisItemBox">
+      <text catchtap="searchSongsHandle" data-name="{{item}}" class="hisItem" wx:for="{{hisSearchList}}" wx:key="item">{{item}}</text>
+    </view>
+  </view>
+  <view wx:if="{{resSongs&&resSongs.length>0}}">
+    <text class="resultContent">搜索结果</text>
+    <scroll-view scroll-y class="scrollResList">
+      <Songs
+      class="resultList" 
+      wx:for="{{resSongs}}" 
+      wx:key="id" 
+      songsName="{{item.name}}" 
+      songsArt="{{item.artists[0].name}}"
+      mvId="{{item.mvid}}"
+      ></Songs>
+    </scroll-view>
+  </view>
+  <view wx:else>
+    <view wx:if="{{searchContent}}" class="actualTimeMain">
+      <text class="sousuoContent">搜索内容"{{searchContent}}"</text>
+      <view class="showContent">
+        <view class="showItem" catchtap="searchSongsHandle" data-name="{{item.name}}" wx:for="{{actualTimeContent}}" wx:key="id">
+          <text class="iconfont icon-sousuo diffSousuo"></text>
+          <text class="dimContent">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="main">
+      <text class="hotHot iconfont icon-huore">热搜榜</text>
+      <view class="hotSearch">
+        <view class="hotItem" wx:for="{{searchHotDetai}}" wx:key="score" catchtap="searchSongsHandle" data-name="{{item.searchWord}}">
+          <text class="hotIndex">{{index+1}}</text>
+          <text class="hotName">{{item.searchWord}}</text>
+          <image src="{{item.iconUrl}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

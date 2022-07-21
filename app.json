@@ -1,13 +1,13 @@
 {
   "pages": [
 
-   
+    "pages/search/search",
     "pages/index/index",
     "pages/recommendSongs/recommendSongs",
     "pages/login/login",
     "pages/mv/mv",
     "pages/person/person",
-    "pages/search/search",
+    
     "pages/songDetail/songdetail"
 
   ],

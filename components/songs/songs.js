@@ -6,7 +6,7 @@ Component({
   properties: {
     songsUrl:{
       type:String,
-      value:"../../static/images/222.png"
+      value:""
     },
     songsName:{
       type:String,
@@ -15,6 +15,10 @@ Component({
     songsArt:{
       type:String,
       value:"李香兰"
+    },
+    mvId:{
+      type:String,
+      value:""
     }
   },
 

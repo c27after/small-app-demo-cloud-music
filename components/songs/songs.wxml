@@ -1,14 +1,14 @@
 
   <view class="recMusItem">
     <view class="itemLeft">
-      <image src="{{songsUrl}}"></image>
+      <image wx:if="{{songsUrl}}" src="{{songsUrl}}"></image>
       <view class="songsInfo">
         <text class="songsName">{{songsName}}</text>
         <text class="songsArt">{{songsArt}}</text>
       </view>
     </view>
     <view class="itemRight">
-      <text class="iconfont icon-bofang"></text>
+      <text wx:if="{{mvId&&mvId!=0}}" class="iconfont icon-shipinbofang"></text>
       <text class="iconfont icon-xiai"></text>
       <text class="iconfont icon-xiazai"></text>
     </view>
