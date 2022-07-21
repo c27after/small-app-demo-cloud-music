@@ -20,13 +20,14 @@
     <text class="resultContent">搜索结果</text>
     <scroll-view scroll-y class="scrollResList">
       <Songs
+      data-id="{{item.id}}"
+      catchtap="toPlay"
       class="resultList" 
       wx:for="{{resSongs}}" 
       wx:key="id" 
       songsName="{{item.name}}" 
-      songsArt="{{item.artists[0].name}}"
-      mvId="{{item.mvid}}"
-      ></Songs>
+      songsArt="{{item.artists[0].name}}" 
+      mvId="{{item.mvid}}"></Songs>
     </scroll-view>
   </view>
   <view wx:else>
@@ -50,7 +51,4 @@
       </view>
     </view>
   </view>
-
-
-
 </view>

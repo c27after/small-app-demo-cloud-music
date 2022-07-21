@@ -32,6 +32,11 @@ Page({
     hotHySong:songs.data.playlists
    })
   },
+  toSongsMenu(e){
+      wx.navigateTo({
+        url: '/pages/songMenu/songMenu?id='+e.currentTarget.dataset.id,
+      })
+  },
   goToRec(){
     wx.navigateTo({
       url: '../recommendSongs/recommendSongs',

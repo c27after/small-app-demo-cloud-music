@@ -28,7 +28,7 @@
   <view class="recommendMain">
     <!-- 滑块区域 -->
     <scroll-view class="scrollView" enable-flex scroll-x>
-      <view class="scrollViewItem" wx:for="{{recommendList}}" wx:key="id">
+      <view class="scrollViewItem" catchtap="toSongsMenu" data-id="{{item.id}}" wx:for="{{recommendList}}" wx:key="id">
         <image src="{{item.picUrl}}"></image>
         <text>{{item.name}}</text>
       </view>
@@ -47,7 +47,7 @@
       <!-- 标题 -->
       <view class="hotTitle">华语热门歌单</view>
       <!-- 内容 -->
-      <view class="hotMusicItem" wx:for="{{hotHySong}}" wx:key="id">
+      <view class="hotMusicItem" catchtap="toSongsMenu" data-id="{{item.id}}" wx:for="{{hotHySong}}" wx:key="id">
         <image src="{{item.coverImgUrl}}"></image>
         <text class="index">{{index+1}}</text>
         <text class="hotSongName">{{item.name}}</text>

@@ -1,4 +1,4 @@
-/* pages/index/index.wxss */
+/* pages/index/index.wxss */index
 .swiperContainer {
   width: 100%;
 }
@@ -103,12 +103,11 @@
 
 .index {
   margin-left: 20rpx;
-  font-weight: 600;
 }
 
 .hotSongName {
   margin-left: 20rpx;
-  font-size: 25rpx;
+  font-size: 26rpx;
   /* -webkit-盒子模型 */
   display: -webkit-box;
   /* 溢出隐藏 */

@@ -19,6 +19,10 @@ Component({
     mvId:{
       type:String,
       value:""
+    },
+    sq:{
+      type:{},
+      value:''
     }
   },
 

@@ -1,17 +1,20 @@
 {
   "pages": [
-
-    "pages/search/search",
     "pages/index/index",
+    "pages/songMenu/songMenu",
+    "pages/search/search",
+    
     "pages/recommendSongs/recommendSongs",
     "pages/login/login",
     "pages/mv/mv",
     "pages/person/person",
-    
     "pages/songDetail/songdetail"
-
+    
   ],
-  "requiredBackgroundModes": ["audio", "location"],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTextStyle": "white",
@@ -23,7 +26,8 @@
     "color": "#333",
     "selectedColor": "#d43c33",
     "position": "top",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "首页"
       },

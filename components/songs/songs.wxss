@@ -1,40 +1,65 @@
 @import "../../awsomefont/awsomefont.wxss";
-.recMusItem{
+
+.recMusItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10rpx;
   height: 100rpx;
 }
-.itemLeft{
+
+.itemLeft {
   display: flex;
 }
-.itemLeft image{
+
+.itemLeft image {
   width: 100rpx;
   height: 100rpx;
   border-radius: 10rpx;
 }
-.songsInfo{
+
+.songsInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-left: 15rpx;
 }
-.songsArt{
+
+.songsArt {
   color: #a4a4a4;
   font-size: 26rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
-.songsName{
+
+.songsName {
   display: -webkit-box;
   width: 400rpx;
-  font-size:29rpx;
+  font-size: 29rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  margin-bottom: 10rpx;
 }
-.iconfont{
+
+.iconfont {
   color: #a4a4a4;
   font-size: 40rpx;
   margin: 0 5rpx;
+}
+
+.sq {
+  font-size: 18rpx;
+  border: 1px solid #d43c33;
+  border-radius: 15rpx;
+  padding: 1rpx 6rpx;
+  color: #d43c33;
+  margin-right: 5rpx;
+}
+.isSq{
+  display: flex;
 }

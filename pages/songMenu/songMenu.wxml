@@ -1,0 +1,39 @@
+<view>
+  <view class="bgImageBox">
+    <image class="bgSMD" src="{{playlistDetail.playlist.coverImgUrl}}"></image>
+  </view>
+  <view class="songMenuDetail">
+    <image class="songMenuDetailImg" src="{{playlistDetail.playlist.coverImgUrl}}"></image>
+    <view class="menuInfo">
+      <view class="menuHeader">
+        <text class="menuName">{{playlistDetail.playlist.name}}</text>
+      </view>
+      <view class="menuMain">
+        <image src="{{playlistDetail.playlist.creator.avatarUrl}}" class="creatorAvatar"></image>
+        <text class="creatorName">{{playlistDetail.playlist.creator.nickname}}</text>
+        <text class="favo">＋关注</text>
+      </view>
+      <view class="menuFooter">
+        <text class="introInfo">{{playlistDetail.playlist.description}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="showComment">
+    <text class="iconfont icon-xiai swIcon"> {{playlistDetail.playlist.subscribedCount}}</text>|
+    <text class="iconfont icon-pinglun1 swIcon"> {{playlistDetail.playlist.commentCount}}</text>|
+    <text class="iconfont icon-fenxiang1 swIcon"> {{playlistDetail.playlist.shareCount}}</text>
+
+  </view>
+
+  <view class="songMenuContainer">
+    <Songs
+    wx:for="{{playlistTrackAll}}"
+    wx:key="id"
+    mvId="{{item.mv}}"
+    songsName="{{item.name}}"
+    songsArt="{{item.ar[0].name}}-{{item.al.name}}"
+    sq="{{item.sq}}"
+    ></Songs>
+
+  </view>
+</view>

@@ -98,6 +98,12 @@ Page({
       }
     })
   },
+  toPlay(e) {
+    console.log(e.currentTarget.dataset.id);
+    wx.navigateTo({
+      url: '/pages/songDetail/songdetail?ids=' + e.currentTarget.dataset.id,
+    })
+  },
   // trottle(fn, wait) {
   //   let timer = null
   //   return (...args) => {
